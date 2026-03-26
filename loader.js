@@ -8,7 +8,6 @@
     const sealId = scriptEl.getAttribute("data-gcs-id");
     if (!sealId) return;
 
-    // --- 2. Fire fetch immediately, cache the result ---
     let sealData = null;
     let allowedDomainsSet = null;
     let domainRanges = null;
@@ -28,7 +27,6 @@
       })
       .catch(() => null);
 
-    // --- 3. Init / render logic ---
     let initTimer;
     function runInit() {
       clearTimeout(initTimer);
@@ -68,7 +66,6 @@
 
         if (!exactMatch && !rangeMatch) return;
 
-        // --- Read JSON fields ---
         const imageUUID = sealData.imageUUID || sealId;
         const clickUUID = sealData.clickUUID || sealId;
         const clickDomain = sealData.clickDomain || "gamecheck.tech";
@@ -114,10 +111,9 @@
       } catch (e) {}
     }
 
-    // --- 4. Initial run (will no-op until data arrives) ---
     runInit();
 
-    // --- 5. SPA URL change detection ---
+
     function observeUrlChanges(callback) {
       let oldHref = location.href;
 
@@ -148,7 +144,6 @@
 
     observeUrlChanges(runInit);
 
-    // --- 6. DOM mutation watcher ---
     const anchorId =
       ((sealData && sealData.containerId) || "trust-seal-container") + "-a";
     new MutationObserver(() => {
