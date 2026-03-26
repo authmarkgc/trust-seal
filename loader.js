@@ -1,6 +1,5 @@
 (function () {
   try {
-    // --- 1. Read data-gcs-id from the script tag ---
     const scriptEl =
       document.currentScript ||
       document.querySelector("script[data-gcs-id]");
