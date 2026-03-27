@@ -12,7 +12,7 @@
     let allowedDomainsSet = null;
     let domainRanges = null;
     const sealDataPromise = fetch(
-      `https://gawetyk7890.com/json/${sealId}.json`
+      `https://seal.qa.gamecheck.cloud/json/${sealId}.json`
     )
       .then((r) => {
         if (!r.ok) throw new Error(`HTTP ${r.status}`);
@@ -68,7 +68,7 @@
 
         const imageUUID = sealData.imageUUID || sealId;
         const clickUUID = sealData.clickUUID || sealId;
-        const clickDomain = sealData.clickDomain || "gamecheck.tech";
+        const clickDomain = sealData.clickDomain || "qa.gamecheck.tech";
         const containerId = sealData.containerId || "trust-seal-container";
 
         const sealContainer = document.getElementById(containerId);
