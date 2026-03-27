@@ -78,7 +78,7 @@
         if (document.getElementById(anchorId)) return;
 
         const sealHref = `https://${clickDomain}/seal-scan/${clickUUID}`;
-        const imageUrl = `https://gawetyk7890.com/seal/${imageUUID}.png`;
+        const imageUrl = `https://seal.qa.gamecheck.cloud/seal/${imageUUID}.png`;
         const width = sealData.width || 217.75;
         const height = sealData.height || 64;
 
