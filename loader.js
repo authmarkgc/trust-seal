@@ -12,7 +12,7 @@
     let allowedDomainsSet = null;
     let domainRanges = null;
     const sealDataPromise = fetch(
-      `https://seal.qa.gamecheck.cloud/json/${sealId}.json`
+      `https://seal.qa.gamecheck.cloud/json/${sealId}.json?v=${Date.now()}`
     )
       .then((r) => {
         if (!r.ok) throw new Error(`HTTP ${r.status}`);
