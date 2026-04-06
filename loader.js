@@ -68,7 +68,7 @@
 
         const imageUUID = sealData.imageUUID || sealId;
         const clickUUID = sealData.clickUUID || sealId;
-        const clickDomain = sealData.clickDomain || "qa.gamecheck.tech";
+        const clickDomain = sealData.clickDomain || "qa.gamecheckk.tech";
         const containerId = sealData.containerId || "trust-seal-container";
 
         const sealContainer = document.getElementById(containerId);
@@ -78,7 +78,7 @@
         if (document.getElementById(anchorId)) return;
 
         const sealHref = `https://${clickDomain}/seal-scan/${clickUUID}`;
-        const imageUrl = `https://seal.qa.gamecheck.cloud/seal/${imageUUID}.png`;
+        const imageUrl = `https://seal.qa.gamecheckk.cloud/seal/${imageUUID}.png`;
         const width = sealData.width || 217.75;
         const height = sealData.height || 64;
 
